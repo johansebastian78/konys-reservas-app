@@ -1,0 +1,173 @@
+/* Colores de Konys: azul petróleo oscuro y naranja */
+:root {
+  --primario: #0F2B3D;
+  --acento: #F28C28;
+  --fondo: #f5f5f5;
+  --gris: #cfcfcf;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--fondo);
+  color: #222;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: 1px solid var(--primario);
+  background: white;
+  color: var(--primario);
+  padding: 6px 12px;
+  border-radius: 6px;
+  margin: 2px;
+}
+button:disabled { opacity: 0.4; cursor: not-allowed; }
+
+input, select {
+  font-family: inherit;
+  padding: 8px;
+  border: 1px solid var(--gris);
+  border-radius: 6px;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.btn-principal {
+  display: inline-block;
+  background: var(--acento);
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.error { color: #c0392b; font-weight: 600; }
+.aviso { color: #777; }
+.leyenda { font-size: 13px; color: #666; }
+
+/* Encabezado */
+.header {
+  background: var(--primario);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  flex-wrap: wrap;
+}
+.logo { font-weight: 700; font-size: 22px; color: var(--acento); }
+.menu { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 16px; }
+.menu a { color: white; text-decoration: none; }
+.menu .btn-admin { border: 1px solid white; padding: 4px 10px; border-radius: 6px; }
+
+/* Hero */
+.hero {
+  background: var(--primario);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+.hero h1 { font-size: 56px; margin: 0; color: var(--acento); }
+
+/* Secciones */
+.seccion { max-width: 1100px; margin: auto; padding: 30px 20px; }
+.seccion h2 { border-bottom: 2px solid var(--acento); padding-bottom: 6px; }
+
+/* Tarjetas de mesas */
+.mesas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.card h3 { margin: 8px 0 0; }
+.card p { margin: 4px 0; color: #666; }
+.card button { width: 100%; margin-top: 8px; }
+.card-inactiva { opacity: 0.6; }
+.card-foto { width: 100%; height: 130px; object-fit: cover; border-radius: 8px; }
+.sin-foto { background: #e5e5e5; display: flex; align-items: center; justify-content: center; font-size: 40px; }
+.badge { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 12px; }
+.libre { background: #d4f5dd; color: #1e7b3a; }
+.ocupada { background: #555; color: white; }
+
+/* Carta */
+.categoria { text-transform: capitalize; color: var(--acento); }
+.platos { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+.plato { background: white; border-radius: 8px; padding: 12px; display: flex; justify-content: space-between; gap: 10px; }
+.plato p { margin: 4px 0 0; color: #666; font-size: 14px; }
+.precio { font-weight: 700; color: var(--primario); white-space: nowrap; }
+
+/* Footer */
+.footer { background: var(--primario); color: white; text-align: center; padding: 20px; margin-top: 30px; }
+.footer p { margin: 4px; }
+
+/* Modal de reserva */
+.fondo-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.modal {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+  max-height: 95vh;
+  overflow-y: auto;
+}
+.modal-titulo { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--gris); }
+.modal-titulo h2 { font-size: 18px; }
+.modal-cuerpo { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.modal label { font-size: 13px; color: #555; }
+.slots { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.slot { margin: 0; }
+.slot.ocupado { background: #ccc; color: #777; border-color: #bbb; text-decoration: line-through; }
+.slot.elegido { background: var(--primario); color: white; }
+.resumen { background: #f2f2f2; padding: 10px; border-radius: 6px; margin: 10px 0; }
+.resumen p { margin: 4px 0; }
+.modal .btn-principal { width: 100%; }
+.confirmacion { max-width: 400px; text-align: center; }
+.ok {
+  width: 70px; height: 70px; margin: auto;
+  border: 4px solid var(--acento); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 22px;
+}
+
+/* Login admin */
+.login { min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+.login-caja { background: white; padding: 30px; border-radius: 10px; width: 320px; text-align: center; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); }
+.login-caja label { display: block; text-align: left; font-size: 13px; }
+.login-caja .btn-principal { width: 100%; margin-bottom: 10px; }
+
+/* Panel admin */
+.admin { display: flex; min-height: 100vh; }
+.lateral { background: var(--primario); color: white; width: 200px; padding: 16px; display: flex; flex-direction: column; }
+.lateral button { background: transparent; color: white; border-color: #ffffff55; text-align: left; margin-bottom: 6px; }
+.lateral button.activo { background: var(--acento); border-color: var(--acento); }
+.lateral .salir { margin-top: auto; }
+.contenido { flex: 1; padding: 20px; overflow-x: hidden; }
+.formulario { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 16px; }
+.formulario input, .formulario select { width: auto; flex: 1; min-width: 120px; margin: 0; }
+.tabla-scroll { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; background: white; }
+th { background: var(--primario); color: white; padding: 8px; text-align: left; }
+td { padding: 6px 8px; border-bottom: 1px solid #eee; }
+td input { margin: 0; }
+td .corto, td input[type='time'] { width: 110px; }
