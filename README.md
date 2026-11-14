@@ -6,8 +6,8 @@ Proyecto de la asignatura Configuración y Mantenimiento de Software · Universi
 
 ## Enlaces
 
-- Aplicación en Vercel: Pendiente
-- Video explicativo: Pendiente
+- Aplicación en Vercel: https://konys-reservas-app.vercel.app
+- Video explicativo: pendiente por subir
 
 ## Tecnologías
 
