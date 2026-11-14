@@ -171,3 +171,19 @@ th { background: var(--primario); color: white; padding: 8px; text-align: left; 
 td { padding: 6px 8px; border-bottom: 1px solid #eee; }
 td input { margin: 0; }
 td .corto, td input[type='time'] { width: 110px; }
+
+/* Celular: todo en una columna */
+@media (max-width: 700px) {
+  .menu { width: 100%; margin-top: 8px; }
+  .menu { gap: 6px 12px; }
+  .menu a { font-size: 14px; }
+  .hero h1 { font-size: 40px; }
+  .modal-cuerpo { grid-template-columns: 1fr; }
+  .slots { grid-template-columns: repeat(3, 1fr); }
+  .admin { flex-direction: column; }
+  .lateral { width: 100%; flex-direction: row; flex-wrap: wrap; }
+  .lateral h3 { width: 100%; margin: 0 0 8px; }
+  .lateral .salir { margin-top: 0; }
+}
+
+input[type='checkbox'] { width: auto; margin: 0 4px 0 0; }

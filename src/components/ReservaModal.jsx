@@ -54,6 +54,14 @@ export default function ReservaModal({ mesa, horarios, onCerrar }) {
     if (!n || n < 1) return setError('Escribe el número de personas.')
     if (n > mesa.capacidad) return setError('Esta mesa es máximo para ' + mesa.capacidad + ' personas.')
 
+    // Se revisa otra vez para evitar doble reserva
+    const actuales = await traerReservas(mesa.id, fecha)
+    if (slotOcupado(slot, actuales)) {
+      setReservas(actuales)
+      setSlot(null)
+      return setError('Alguien acaba de reservar esa hora. Elige otra.')
+    }
+
     const nueva = {
       mesa_id: mesa.id,
       cliente_nombre: nombre.trim(),
