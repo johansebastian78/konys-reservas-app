@@ -6,8 +6,9 @@ Proyecto de la asignatura Configuración y Mantenimiento de Software · Universi
 
 ## Enlaces
 
-- Aplicación en Vercel: https://konys-reservas-app.vercel.app
+- Aplicación en Vercel: https://konys-reservas-app-one.vercel.app
 - Video explicativo: pendiente por subir
+- Repositorio: https://github.com/johansebastian78/konys-reservas-app
 
 ## Tecnologías
 
