@@ -10,6 +10,7 @@ Proyecto de la asignatura Configuración y Mantenimiento de Software · Universi
 - Video explicativo: pendiente por subir
 - Repositorio: https://github.com/johansebastian78/konys-reservas-app
 - Mockups en Figma: https://www.figma.com/design/bjiIWOOJAHOwdeFFZISUV7/Konys-Pizza---Mockups
+- Casos de uso en Miro: https://miro.com/app/board/uXjVENmA-bo=/
 
 ## Tecnologías
 
