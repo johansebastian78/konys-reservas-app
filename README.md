@@ -81,4 +81,4 @@ En Supabase abrir SQL Editor, pegar el contenido de `supabase/script.sql` y darl
 
 ## Créditos
 
-Integrantes: Johan
+Hecho por: Johan Sebastian
